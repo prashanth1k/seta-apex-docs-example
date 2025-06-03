@@ -41,8 +41,11 @@ To use this documentation with the MCP server:
 apex/
 ├── manifest.json        # Documentation metadata and topic organization
 └── topics/
-    ├── apex.md         # Core Apex concepts and features
-    └── async.md        # Asynchronous Apex documentation
+    ├── apex_core_concepts.md    # Fundamental Apex concepts and features
+    ├── apex_data_types.md       # Apex data types and type system
+    ├── apex_dml_operations.md   # Database operations and DML statements
+    ├── apex_soql_basics.md      # SOQL query basics and best practices
+    └── batch.md                 # Batch Apex implementation and patterns
 ```
 
 ## Contributing

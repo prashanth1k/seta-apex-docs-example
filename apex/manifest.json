@@ -1,19 +1,126 @@
 {
   "name": "Apex Core Language Reference",
-  "description": "Documentation for core Apex programming language features, including SOQL, DML, Triggers, Asynchronous Apex including Batch Apex, Future Apex, and Scheduled Apex.",
+  "description": "Documentation for core Apex programming language features, including SOQL, DML, and Asynchronous Apex including Batch Apex",
   "version": "Salesforce API v63.0",
-  "default_doc": "topics/apex.md",
+  "default_doc": "topics/apex_core_concepts.md",
   "topics": [
     {
-      "name": "apex",
-      "file": "topics/apex.md",
-      "tags": ["sql", "dml", "sosl"]
+      "name": "apex core concepts",
+      "file": "topics/apex_core_concepts.md",
+      "related": ["apex data types", "apex dml", "apex soql"],
+      "prerequisites": [],
+      "leads_to": ["apex data types", "apex dml", "apex soql"],
+      "tags": [
+        "apex",
+        "overview",
+        "characteristics",
+        "development",
+        "testing",
+        "governor limits",
+        "fundamentals"
+      ],
+      "difficulty": "beginner",
+      "use_cases": ["getting started", "overview", "architecture understanding"]
     },
     {
-      "name": "async",
-      "file": "topics/async.md",
-      "related": ["apex"],
-      "tags": ["future method", "@future", "future apex", "async method"]
+      "name": "apex data types",
+      "file": "topics/apex_data_types.md",
+      "related": ["apex core concepts", "apex dml", "apex soql"],
+      "prerequisites": ["apex core concepts"],
+      "leads_to": ["apex dml", "apex soql"],
+      "tags": [
+        "data types",
+        "primitives",
+        "collections",
+        "list",
+        "set",
+        "map",
+        "sobject",
+        "variables",
+        "null",
+        "casting"
+      ],
+      "difficulty": "beginner",
+      "use_cases": [
+        "variable declaration",
+        "collection handling",
+        "type conversion",
+        "null safety"
+      ]
+    },
+    {
+      "name": "apex dml",
+      "file": "topics/apex_dml_operations.md",
+      "related": ["apex core concepts", "apex data types", "apex soql"],
+      "prerequisites": ["apex core concepts", "apex data types"],
+      "leads_to": ["batch"],
+      "tags": [
+        "dml",
+        "insert",
+        "update",
+        "upsert",
+        "delete",
+        "undelete",
+        "merge",
+        "bulkification",
+        "database class",
+        "transaction",
+        "crud"
+      ],
+      "difficulty": "intermediate",
+      "use_cases": [
+        "record manipulation",
+        "bulk operations",
+        "error handling",
+        "transaction management"
+      ]
+    },
+    {
+      "name": "apex soql",
+      "file": "topics/apex_soql_basics.md",
+      "related": ["apex core concepts", "apex data types", "apex dml"],
+      "prerequisites": ["apex core concepts", "apex data types"],
+      "leads_to": ["batch"],
+      "tags": [
+        "soql",
+        "query",
+        "select",
+        "where",
+        "bind variables",
+        "relationships",
+        "aggregate",
+        "for loops",
+        "bulkify",
+        "subquery"
+      ],
+      "difficulty": "intermediate",
+      "use_cases": [
+        "data retrieval",
+        "filtering",
+        "relationships",
+        "aggregation",
+        "bulk queries"
+      ]
+    },
+    {
+      "name": "batch",
+      "file": "topics/batch.md",
+      "related": ["apex core concepts"],
+      "prerequisites": ["apex core concepts", "apex soql", "apex dml"],
+      "leads_to": [],
+      "tags": [
+        "batch apex",
+        "database.batchable",
+        "bulk processing",
+        "large data sets",
+        "governor limits"
+      ],
+      "difficulty": "advanced",
+      "use_cases": [
+        "mass data processing",
+        "large datasets",
+        "scheduled bulk operations"
+      ]
     }
   ],
   "totalSnippets": 100
